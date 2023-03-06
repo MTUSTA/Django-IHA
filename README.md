@@ -53,7 +53,7 @@ admin.py, **admin** kullanıcısının modeldeki veritabanı tabloların erişme
 
 ![myimage-alt-tag](https://github.com/MTUSTA/Django-IHA/blob/main/ReadmeMD_Image/runserver.jpg?raw=true)
 
-Proje ilk belirlenen url("**/**") olarak login ekranını açar. Alttaki "Yeni bir hesap oluştur" yazısındaki url ile kayıt sayfasına gidilebilir. Admin oluşturduğumuzdan dolayı admin kullanıcısıyla da giriş yapılabilir.
+Proje ilk belirlenen url("**/**") olarak login ekranını açar. Alttaki "**Yeni bir hesap oluştur**" yazısındaki url ile kayıt sayfasına gidilebilir. Admin oluşturduğumuzdan dolayı admin kullanıcısıyla da giriş yapılabilir.
 
 ![myimage-alt-tag](https://github.com/MTUSTA/Django-IHA/blob/main/ReadmeMD_Image/login.jpg?raw=true)
 
