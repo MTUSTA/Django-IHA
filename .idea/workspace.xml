@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="21db4e81-9c66-42a4-9152-038a54d6ca93" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/IHA/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IHA/templates/pages-iha-create.html" beforeDir="false" afterPath="$PROJECT_DIR$/IHA/templates/pages-iha-create.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +29,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/MehmetTahaUSTA/Documents/GitHub/Django-IHA",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -38,6 +46,7 @@
       <option name="presentableId" value="Default" />
       <updated>1678135073691</updated>
       <workItem from="1678135076138" duration="56000" />
+      <workItem from="1678135173124" duration="2057000" />
     </task>
     <servers />
   </component>
