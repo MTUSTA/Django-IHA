@@ -86,15 +86,47 @@ Kayıtlı IHA güncellenmek istenirse, karttaki **DÜZENLE** butonuna basılmal�
 ![myimage-alt-tag](https://github.com/MTUSTA/Django-IHA/blob/main/ReadmeMD_Image/iha_g%C3%BCncelle.jpg?raw=true)
 
 **SİL** butonuna basıldığında IHA SİL sayfasına gidilir. Evet denilirse kayıt veritabanından silinir.
+
 ![myimage-alt-tag](https://github.com/MTUSTA/Django-IHA/blob/main/ReadmeMD_Image/iha%20sil.jpg?raw=true)
 
 Herhangi bir hata olduğunda **404** sayfasıyla karşılaşılır.
+
 ![myimage-alt-tag](https://github.com/MTUSTA/Django-IHA/blob/main/ReadmeMD_Image/404.jpg?raw=true)
 
 Filtreleme seçenekleri kullanılarak istenilen veri kolaylıkla erişilebilir. Bu seçenekler isteğe göre arttılabilir veya azaltılabilinir.
+
 ![myimage-alt-tag](https://github.com/MTUSTA/Django-IHA/blob/main/ReadmeMD_Image/django-filter.jpg?raw=true)
 
 ![myimage-alt-tag](https://github.com/MTUSTA/Django-IHA/blob/main/ReadmeMD_Image/django-filter2.jpg?raw=true)
 
-Sağ üst köşedeki kullanıcıdan **Sign Out** ya da **logout** urlsine gidilerek çıkış yapılır.
+Sağ üst köşedeki kullanıcıdan **Sign Out** ya da **logout** urlsine gidilerek çıkış yapılır. Sistem, kullaniciyi login ekranına yönlendirir.
+
 ![myimage-alt-tag](https://github.com/MTUSTA/Django-IHA/blob/main/ReadmeMD_Image/logout.jpg?raw=true)
+
+Projeyi dockerda çalışacak hale getirmek için **Dockerfile** oluşturulmalıdır.
+```
+FROM python:3.11
+
+WORKDIR /app
+
+COPY requirements.txt requirements.txt
+
+RUN pip3 install -r requirements.txt
+
+COPY . .
+
+CMD ["python3","manage.py","makemigrations"]
+CMD ["python3","manage.py","migrate"]
+CMD ["python3","manage.py","runserver"]
+```
+**Dockerfile** dosyasının olduğu dizinde aşağıdaki komutları terminalde çalıştırın. 
+
+**İlk Komut** -> projeyi dockerda uygun şekilde çalışacak bi paket haline getirecektir.
+
+docker build --tag python-django-iha .
+
+**İkinci Komut** -> Oluşan Paketi docker da çalıştıracaktır.(deploy)
+
+docker run --publish 8000:8000 python-django-iha
+
+**NOT!!! veritabanı url'si localhost olduğunda bilgisayardaki localhost'a bağlanamıyor**
