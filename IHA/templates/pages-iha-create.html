@@ -312,6 +312,7 @@
                                     </div>
                                 {% endif %}
                             {% endfor %}
+
                             {% for field in property_form %}
                                 {% if field.errors %}
                                     <div class="alert alert-primary bg-primary text-light border-0 alert-dismissible fade show"
@@ -325,10 +326,12 @@
                                     </div>
                                 {% endif %}
                             {% endfor %}
+
                             <form class="row g-3 needs-validation" method="POST" enctype="multipart/form-data">
                                 {% csrf_token %}
-
-                                {{ iha_form.as_p }}
+                                {% for field in iha_form %}
+                                    <p>{{ field.label }} {{ field }}</p>
+                                {% endfor %}
                                 {{ property_form.as_p }}
 
 
