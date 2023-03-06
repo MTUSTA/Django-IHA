@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21db4e81-9c66-42a4-9152-038a54d6ca93" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/IHA/templates/pages-iha-create.html" beforeDir="false" afterPath="$PROJECT_DIR$/IHA/templates/pages-iha-create.html" afterDir="false" />
+    <list default="true" id="21db4e81-9c66-42a4-9152-038a54d6ca93" name="Changes" comment="readmeMD icin resim eklendi">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IHA/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/IHA/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,11 +47,42 @@
       <option name="presentableId" value="Default" />
       <updated>1678135073691</updated>
       <workItem from="1678135076138" duration="56000" />
-      <workItem from="1678135173124" duration="2057000" />
+      <workItem from="1678135173124" duration="6056000" />
     </task>
+    <task id="LOCAL-00001" summary="iha create error fix">
+      <created>1678137270085</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678137270085</updated>
+    </task>
+    <task id="LOCAL-00002" summary="readmeMD icin resim eklendi">
+      <created>1678137426209</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678137426209</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="iha create error fix" />
+    <MESSAGE value="readmeMD icin resim eklendi" />
+    <option name="LAST_COMMIT_MESSAGE" value="readmeMD icin resim eklendi" />
   </component>
 </project>
