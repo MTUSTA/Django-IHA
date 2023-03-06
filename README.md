@@ -1,10 +1,10 @@
 # Django-IHA
 
-İlk olarak proje açıldığında sıfırdan Venv oluşturulmalıdır. Projede python 3.11 kullanılmıştır.
+İlk olarak proje açıldığında sıfırdan **Venv** oluşturulmalıdır. Projede python 3.11 kullanılmıştır.
 
 ![myimage-alt-tag](https://github.com/MTUSTA/Django-IHA/blob/main/ReadmeMD_Image/yeni%20venv%20olusturma.jpg?raw=true)
 
-Venv oluşturulduktan sonra requirements.txt de kütüphaneler kurulmalıdır
+**Venv** oluşturulduktan sonra requirements.txt de kütüphaneler kurulmalıdır
 
 ![myimage-alt-tag](https://github.com/MTUSTA/Django-IHA/blob/main/ReadmeMD_Image/requirements2.jpg?raw=true)
 
@@ -39,7 +39,7 @@ admin arayüzüne erişmek için **python manage.py createsuperuser** komutu kul
 
 ![myimage-alt-tag](https://github.com/MTUSTA/Django-IHA/blob/main/ReadmeMD_Image/createsuperuser.jpg?raw=true)
 
-admin.py, admin kullanıcısının modeldeki veritabanı tabloların erişmesi için izin verir.
+admin.py, **admin** kullanıcısının modeldeki veritabanı tabloların erişmesi için izin verir.
 
 ![myimage-alt-tag](https://github.com/MTUSTA/Django-IHA/blob/main/ReadmeMD_Image/admin_py.jpg?raw=true)
 
@@ -53,11 +53,11 @@ admin.py, admin kullanıcısının modeldeki veritabanı tabloların erişmesi i
 
 ![myimage-alt-tag](https://github.com/MTUSTA/Django-IHA/blob/main/ReadmeMD_Image/runserver.jpg?raw=true)
 
-Proje ilk belirlenen url("/") olarak login ekranını açar. Alttaki "Yeni bir hesap oluştur" yazısındaki url ile kayıt sayfasına gidilebilir. Admin oluşturduğumuzdan dolayı admin kullanıcısıyla da giriş yapılabilir.
+Proje ilk belirlenen url("**/**") olarak login ekranını açar. Alttaki "Yeni bir hesap oluştur" yazısındaki url ile kayıt sayfasına gidilebilir. Admin oluşturduğumuzdan dolayı admin kullanıcısıyla da giriş yapılabilir.
 
 ![myimage-alt-tag](https://github.com/MTUSTA/Django-IHA/blob/main/ReadmeMD_Image/login.jpg?raw=true)
 
-Projenin kayıt sayfasına gitmek için "/register" url'si yazılarak kayıt sayfasına gidilebilinir.
+Projenin kayıt sayfasına gitmek için "**/register**" url'si yazılarak kayıt sayfasına gidilebilinir.
 
 ![myimage-alt-tag](https://github.com/MTUSTA/Django-IHA/blob/main/ReadmeMD_Image/hesap%20olu%C5%9Fturmaca.jpg?raw=true)
 
