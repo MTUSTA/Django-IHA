@@ -9,11 +9,11 @@ class IhaPropertyFilter(django_filters.FilterSet):
         super().__init__(*args, **kwargs)
         for field in self.filters:
             self.filters[field].field.widget.attrs.update({'class': 'form-control'})
-
+    # icontains -> kullanıcının girdiği değer içinde var mı diye bakar
     ad_contain = CharFilter(field_name='ad', lookup_expr='icontains')
     marka_contain = CharFilter(field_name='marka', lookup_expr='icontains')
 
     class Meta:
         model = iha_property
         fields = '__all__'
-        exclude = 'image'  # image filter yok
+        exclude = 'image'  # image filter yapısında yok, bundan dolayı dahil edilmedi

@@ -8,7 +8,7 @@ class iha_product(models.Model):
 
     def __str__(self):
         val = self.model_code
-        # iha_property olusturulmamissa exception a düs isim ekleme
+        # iha_property olusturulmamissa exception a düs, isim ekleme
         try:
             val += "-" + self.iha_property.ad
         except:

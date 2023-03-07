@@ -11,18 +11,19 @@ from .filters import IhaPropertyFilter
 @unauthenticated_user
 def loginPage(request):
     if request.method == 'POST':
+        # take username and password from request
         username = request.POST.get("username")
         password = request.POST.get("password")
         rememberMe = request.POST.get("remember")  # None or True -> ne kadar calisiyor bilmiyorum
-
+        # try authentica with username and password
         user = authenticate(username=username, password=password)
-
+        # if user exist -> login, else -> error
         if user is not None:
             login(request, user)
 
             if rememberMe is None:
                 request.session.set_expiry(0)
-
+            # if url contains next, redirect next_url
             if request.GET.get('next') is not None:
                 return redirect(request.GET.__getitem__('next'))
             return redirect('dashboard')
@@ -37,10 +38,12 @@ def registerPage(request):
 
     if request.method == 'POST':
         term = request.POST.get("terms")
+        # if user doesnt accept terms, return error
         if term is None:
             messages.error(request, 'Şartlar ve koşullar kabul edilmelidir.')
         else:
             userForm = UserForm(request.POST)
+            # if valid, save it -> else return error
             if userForm.is_valid():
                 user_name = userForm.cleaned_data.get("username")
                 userForm.save()
@@ -61,8 +64,11 @@ def logoutPage(request):
 
 @login_required(login_url='/')
 def dashboard(request):
+    # get all iha property
     all_iha = iha_property.objects.all()
+    # django-filter -> filtering
     iha_property_filter = IhaPropertyFilter(request.GET, queryset=all_iha)
+    # filtered data
     all_iha = iha_property_filter.qs
     context = {'all_iha': all_iha, 'iha_property_filter': iha_property_filter}
     return render(request, 'pages-dashboard.html', context=context)
@@ -89,15 +95,20 @@ def create_iha(request):
 
 @login_required(login_url='/')
 def update_iha(request, iha_pk):
+    # if iha not found -> give an error
     try:
         iha_elem = iha_product.objects.get(pk=iha_pk)
     except iha_product.DoesNotExist:
         return redirect('404')
+
     update_iha_form = IhaProductUpdateForm(instance=iha_elem)
     update_property_form = IhaPropertyUpdateForm(instance=iha_elem.iha_property)
+
     if request.method == 'POST':
+
         update_iha_form = IhaProductUpdateForm(request.POST, request.FILES, instance=iha_elem)
         update_property_form = IhaPropertyUpdateForm(request.POST, request.FILES, instance=iha_elem.iha_property)
+
         if update_property_form.is_valid() and update_iha_form.is_valid():
             update_iha_form.save()
             update_property_form.save()
@@ -111,13 +122,16 @@ def update_iha(request, iha_pk):
 
 @login_required(login_url='/')
 def delete_iha(request, iha_pk):
+    # if iha not found -> give an error
     try:
         iha_elem = iha_product.objects.get(pk=iha_pk)
     except iha_product.DoesNotExist:
         return redirect('404')
+
     if request.method == 'POST':
         iha_elem.delete()
         return redirect('dashboard')
+
     context = {'iha_elem': iha_elem}
     return render(request, 'pages-iha-delete.html', context=context)
 
